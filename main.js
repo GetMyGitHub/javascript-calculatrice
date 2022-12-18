@@ -17,7 +17,7 @@ document.addEventListener('click', (e) => {
 const calculer = (valeur) => {
     if(listKeyCodes.includes(valeur)){
         switch (valeur) {
-            case '53':
+            case '8':
                 ecran.textContent = "";
                 break;
             case '13':
@@ -32,3 +32,7 @@ const calculer = (valeur) => {
         }
     }
 }
+
+window.addEventListener('error', (e) => {
+    alert('Une erreur est survenue dans votre calcul : ' + e.message)
+});
